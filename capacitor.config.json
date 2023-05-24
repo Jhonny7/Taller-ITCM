@@ -1,0 +1,19 @@
+{
+	"appId": "mx.com.olam.systems.taller.itcm",
+	"appName": "Taller Tec",
+	"bundledWebRuntime": false,
+	"npmClient": "npm",
+	"webDir": "www",
+	"plugins": {
+	  "SplashScreen": {
+		"androidScaleType": "CENTER_CROP",
+		"launchShowDuration": 2000,
+		"launchAutoHide": true
+	  },
+	  "PushNotifications": {
+		"presentationOptions": ["badge", "sound", "alert"]
+	  }
+	},
+	"cordova": {}
+  }
+  

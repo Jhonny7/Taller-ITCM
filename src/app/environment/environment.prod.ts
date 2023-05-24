@@ -7,3 +7,5 @@ export const environment ={
     delete: `${apiPath}product`,
     getProduct: `${apiPath}product/`,
 }
+
+//git: https://github.com/Jhonny7/Taller-ITCM
