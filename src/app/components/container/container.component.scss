@@ -1,0 +1,17 @@
+.taller-container {
+    padding: 20px;
+    height: calc(100% - 190px);
+    overflow-y: scroll;
+    max-width: 1350px;
+    margin: auto;
+}
+
+.taller-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.taller-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}

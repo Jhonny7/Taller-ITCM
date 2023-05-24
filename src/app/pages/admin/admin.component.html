@@ -1,0 +1,75 @@
+<taller-header></taller-header>
+<container>
+  <loader *ngIf="!products || products.length <= 0"></loader>
+
+  <table>
+    <caption>
+      Productos
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Creado por</th>
+        <th scope="col">Fecha de creación</th>
+        <th scope="col">Imagen</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i = index">
+        <td data-label="Nombre">{{ product.name }}</td>
+        <td data-label="Creado por">{{ product.create_by }}</td>
+        <td data-label="Fecha de creación">
+          {{ product.create_at | dateFormat }}
+        </td>
+        <td data-label="Imagen">
+          <img [src]="product.url_img" alt="" />
+        </td>
+        <td class="edit" (click)="createProduct(product)">
+          <span class="material-icons-outlined"> edit </span>
+        </td>
+        <td class="delete" (click)="deleteProduct(product)">
+          <span class="material-icons-outlined"> delete </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section class="admin-btns">
+    <button (click)="createProduct()">Crear Producto</button>
+  </section>
+
+  <section class="container-products">
+    <div *ngFor="let p of products" class="product-card">
+
+      <div class="favorite">
+        <span class="material-icons-outlined">
+          favorite
+        </span>
+      </div>
+
+      <div class="ctn-img">
+        <img [src]="p.url_img" alt="" />
+      </div>
+
+      <p class="offer">
+        {{ p.offer_price }}
+        <span class="price">{{ p.price }}</span>
+      </p>
+
+      <div class="info">
+        <p>
+          {{ p.name }}
+        </p>
+        <p class="description">
+          {{ p.description }}
+        </p>
+        <p class="large-description">
+          {{ p.large_description }}
+        </p>
+      </div>
+    </div>
+  </section>
+</container>
+<taller-footer></taller-footer>

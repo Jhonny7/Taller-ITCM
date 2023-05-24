@@ -1,0 +1,31 @@
+<loader *ngIf="load"></loader>
+
+<section class="create-product">
+
+    <div class="closed" (click)="dialog.closeAll()">
+        <span class="material-icons-outlined">
+            close
+        </span>
+    </div>
+
+    <section class="form">
+        <input type="text" placeholder="Nombre del producto" [(ngModel)]="product.name" class="input-tec">
+        <input type="text" placeholder="Descripción del producto" [(ngModel)]="product.description" class="input-tec">
+        <input type="textarea" placeholder="Descripción larga del producto" [(ngModel)]="product.largeDescription" class="input-tec">
+        <input type="text" placeholder="Creado por..." [(ngModel)]="product.createBy" class="input-tec">
+        <input type="text" placeholder="Precio del producto" [(ngModel)]="product.price" class="input-tec">
+        <input type="text" placeholder="Precio oferta del producto" [(ngModel)]="product.offerPrice" class="input-tec">
+        <input type="text" placeholder="Imagn del producto" [(ngModel)]="product.urlImage" class="input-tec">
+
+        
+    </section>
+
+    <div class="ctn-btn">
+        <button class="create-btn" (click)="action()">
+            {{data ? 'Actualizar' : 'Crear'}}
+        </button>
+    </div>
+
+
+    
+</section>

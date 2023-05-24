@@ -1,0 +1,43 @@
+.create-product {
+  max-width: 500px;
+  background-color: #fff;
+}
+
+.closed {
+  position: absolute;
+  right: 4px;
+  background-color: #6f4e13;
+  color: #fff;
+  border-radius: 50%;
+  top: 4px;
+  padding: 2px 4px 0px 4px;
+  cursor: pointer;
+}
+
+.form {
+  margin-top: 40px;
+  text-align: center;
+  .input-tec {
+    outline: none;
+    padding: 10px;
+    border: 1px solid #cacaca;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    width: 80%;
+  }
+}
+
+.ctn-btn{
+  text-align: center;
+  .create-btn {
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 1px #123;
+    background-color: #a3731c;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    width: 80%;
+  }
+  
+}
